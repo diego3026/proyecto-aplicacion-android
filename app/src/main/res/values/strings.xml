@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">shopU</string>
+
+    <!-- Bienvenida-->
+    <string name="title_bienvenida">¡Donde encuentras todo lo que necesitas!</string>
+    <string name="subtitle_bienvenida">Bienvenido a MercaditU, ¡Tu plataforma de compras favorita!</string>
+    <string name="text_buttom_bienvenida">Comenzemos</string>
+    <!-- login-->
+    <string name="title_login">Bienvenido!</string>
+    <string name="email_login">Correo electronico</string>
+    <string name="password_login">Contraseña</string>
+    <string name="forget_password">¿Olvidaste tu contraseña?</string>">
+    <string name="text_buttom_login">Iniciar sesion</string>
+    <string name="text_register">¿No tienes una cuenta?</string>">
+    <string name="text_register_enlace">Registrate</string>">
+    <string name="text_other_sigIn">O continua con</string>">
+
+    <!-- registrate-->
+    <string name="title_register">Registrate</string>
+    <string name="subtitle_register">Crea una cuenta para empezar</string>
+    <string name="nombre_text_register">Nombre</string>
+    <string name="email_text_register">Correo electronico</string>
+    <string name="email_placeholder_register">nombre@email.com</string>
+    <string name="password_text_register">Contraseña</string>
+    <string name="password_placeholder_register">Crea una contraseña</string>
+    <string name="confirm_password_placeholder_register">Confirma tu contraseña</string>
+    <string name="password_not_match">Las contraseñas no coinciden</string>
+    <string name="text_terminos_register">He leído y acepto los Términos y condiciones y la Política de privacidad.</string>
+    <string name="text_buttom_register">Registrarse</string>
+
+    <!-- olvidaste contraseña-->
+    <string name="title_password_reset">¿Has olvidado tu contraseña?</string>
+    <string name="subtitle_password_reset">¡No te preocupes! Suele ocurrir. Por favor ingrese la dirección de correo electrónico vinculada con su cuenta.</string>
+    <string name="placeholder_password_reset">Ingresa tu correo electronico</string>
+    <string name="text_buttom_password_reset">Recuperar contraseña</string>
+    <string name="text_remember_password_reset">¿Recuerdas la contraseña? Iniciar Sesion</string>
+
+    <!--crear nueva contraseña -->
+    <string name="title_create_new_password">Crear nueva contraseña</string>
+    <string name="subtitle_create_new_password">Su nueva contraseña debe ser única de las utilizadas anteriormente.</string>
+    <string name="placeholder_new_password">Nueva contraseña</string>
+    <string name="placeholder_confirm_new_password">Confirmar contraseña</string>
+    <string name="text_buttom_create_new_password">Restablecer la contraseña</string>
+
+    <!--contraseña cambiada -->
+    <string name="title_changed_password">¡Contraseña cambiada!</string>
+    <string name="subtitle_changed_password">Tu contraseña ha sido cambiada exitosamente.</string>
+    <string name="text_buttom_changed_password">Iniciar sesion</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
