@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">shopU</string>
-
+    <string name="app_name">ShopU</string>
+    <string name="your_web_client_id">145166103132-uv6r0ssjbvjhqvfupued4ee4s3b2vbed.apps.googleusercontent.com</string>
     <!-- Bienvenida-->
     <string name="title_bienvenida">¡Donde encuentras todo lo que necesitas!</string>
-    <string name="subtitle_bienvenida">Bienvenido a MercaditU, ¡Tu plataforma de compras favorita!</string>
+    <string name="subtitle_bienvenida">Bienvenido a ShopU, ¡Tu plataforma de compras favorita!</string>
     <string name="text_buttom_bienvenida">Comenzemos</string>
     <!-- login-->
     <string name="title_login">Bienvenido!</string>
@@ -33,7 +33,7 @@
     <string name="subtitle_password_reset">¡No te preocupes! Suele ocurrir. Por favor ingrese la dirección de correo electrónico vinculada con su cuenta.</string>
     <string name="placeholder_password_reset">Ingresa tu correo electronico</string>
     <string name="text_buttom_password_reset">Recuperar contraseña</string>
-    <string name="text_remember_password_reset">¿Recuerdas la contraseña? Iniciar Sesion</string>
+    <string name="text_remember_password_reset">¿Recuerdas la contraseña? </string>
 
     <!--crear nueva contraseña -->
     <string name="title_create_new_password">Crear nueva contraseña</string>

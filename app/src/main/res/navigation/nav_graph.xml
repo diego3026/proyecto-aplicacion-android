@@ -6,7 +6,7 @@
     app:startDestination="@id/bienvenida">
     <fragment
         android:id="@+id/bienvenida"
-        android:name="com.example.shopu.ui.Welcome"
+        android:name="com.example.shopu.ui.welcome.Welcome"
         android:label="fragment_bienvenida"
         tools:layout="@layout/fragment_bienvenida" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/login"
-        android:name="com.example.shopu.ui.Login"
+        android:name="com.example.shopu.ui.login.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/register"
-        android:name="com.example.shopu.ui.Register"
+        android:name="com.example.shopu.ui.register.Register"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -39,16 +39,19 @@
     </fragment>
     <fragment
         android:id="@+id/forgetPassword"
-        android:name="com.example.shopu.ui.ForgetPassword"
+        android:name="com.example.shopu.ui.forgetPassword.ForgetPassword"
         android:label="fragment_forget_password"
         tools:layout="@layout/fragment_forget_password" >
         <action
             android:id="@+id/action_forgetPassword_to_newPassword"
             app:destination="@id/newPassword" />
+        <action
+            android:id="@+id/action_forgetPassword_to_login"
+            app:destination="@id/login" />
     </fragment>
     <fragment
         android:id="@+id/newPassword"
-        android:name="com.example.shopu.ui.NewPassword"
+        android:name="com.example.shopu.ui.newPassword.NewPassword"
         android:label="fragment_new_password"
         tools:layout="@layout/fragment_new_password" >
         <action
@@ -57,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/changedPassword"
-        android:name="com.example.shopu.ui.ChangedPassword"
+        android:name="com.example.shopu.ui.changedPasswrod.ChangedPassword"
         android:label="fragment_changed_password"
         tools:layout="@layout/fragment_changed_password" >
         <action
@@ -66,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/home2"
-        android:name="com.example.shopu.ui.Home"
+        android:name="com.example.shopu.ui.principal.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

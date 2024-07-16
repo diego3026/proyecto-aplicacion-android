@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "145166103132",
+    "project_id": "shopu-af662",
+    "storage_bucket": "shopu-af662.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145166103132:android:a54ef9f721e6c6a9ccec99",
+        "android_client_info": {
+          "package_name": "com.example.shopu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAktBaWUteUKBpxBAWjsKXSzjl6XjFkqvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
