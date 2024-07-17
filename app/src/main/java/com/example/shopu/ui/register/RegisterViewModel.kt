@@ -22,10 +22,6 @@ class RegisterViewModel @Inject constructor(val createAccountUseCase: CreateAcco
         const val MIN_PASSWORD_LENGTH = 6
     }
 
-    private val _navigateToLogin = MutableLiveData<Event<Boolean>>()
-    val navigateToLogin: LiveData<Event<Boolean>>
-        get() = _navigateToLogin
-
     private val _navigateToVerifyEmail = MutableLiveData<Event<Boolean>>()
     val navigateToVerifyEmail: LiveData<Event<Boolean>>
         get() = _navigateToVerifyEmail
@@ -64,10 +60,6 @@ class RegisterViewModel @Inject constructor(val createAccountUseCase: CreateAcco
         _viewState.value = userRegister.toSignInViewState()
     }
 
-    fun onLoginSelected() {
-        _navigateToLogin.value = Event(true)
-    }
-
     private fun isValidOrEmptyEmail(email: String) =
         Patterns.EMAIL_ADDRESS.matcher(email).matches() || email.isEmpty()
 
@@ -81,8 +73,7 @@ class RegisterViewModel @Inject constructor(val createAccountUseCase: CreateAcco
         return SignInViewState(
             isValidEmail = isValidOrEmptyEmail(email),
             isValidPassword = isValidOrEmptyPassword(password, passwordConfirmation),
-            isValidNickName = isValidName(nickName),
-            isValidRealName = isValidName(realName)
+            isValidName = isValidName(name)
         )
     }
 }

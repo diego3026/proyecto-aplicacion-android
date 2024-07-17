@@ -1,5 +1,7 @@
 package com.example.shopu.ui.verification
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -13,6 +15,11 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class Verification : AppCompatActivity() {
+    companion object {
+        fun create(context: Context): Intent =
+            Intent(context, Verification::class.java)
+    }
+
     private lateinit var binding: ActivityVerificationBinding
     private val verificationViewModel: VerificationViewModel by viewModels()
 

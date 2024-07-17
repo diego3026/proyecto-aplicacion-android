@@ -16,6 +16,15 @@
         android:theme="@style/Theme.ShopU"
         tools:targetApi="31">
         <activity
+            android:name=".ui.newPassword.NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ui.changedPasswrod.ChangedPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ui.forgetPassword.ForgetPassword"
+            android:exported="false" />
+        <activity
             android:name=".ui.verification.Verification"
             android:exported="false" />
         <activity

@@ -41,5 +41,6 @@ class Welcome : AppCompatActivity() {
     }
 
     private fun goToLogin() {
+        startActivity(Login.create(this))
     }
 }
