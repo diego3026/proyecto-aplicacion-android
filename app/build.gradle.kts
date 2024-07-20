@@ -79,6 +79,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation("com.google.firebase:firebase-analytics-ktx:22.0.2")
     implementation("com.google.firebase:firebase-firestore-ktx:25.0.0")
+    implementation("com.google.firebase:firebase-storage-ktx:21.0.0")
     implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     //serializacion

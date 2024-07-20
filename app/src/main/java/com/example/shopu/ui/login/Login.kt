@@ -3,16 +3,20 @@ package com.example.shopu.ui.login
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.shopu.R
 import com.example.shopu.core.ex.dismissKeyboard
 import com.example.shopu.core.ex.onTextChanged
 import com.example.shopu.databinding.ActivityLoginBinding
+import com.example.shopu.ui.forgetPassword.ForgetPassword
 import com.example.shopu.ui.login.model.UserLogin
+import com.example.shopu.ui.principal.Principal
 import com.example.shopu.ui.register.Register
-import com.example.shopu.ui.verification.Verification
+import com.example.shopu.ui.verification.VerificationEmail
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -57,7 +61,6 @@ class Login : AppCompatActivity() {
     }
 
     private fun initObservers() {
-
         //ir a register
         loginViewModel.navigateToSignIn.observe(this) {
             it.getContentIfNotHandled()?.let {
@@ -72,10 +75,17 @@ class Login : AppCompatActivity() {
             }
         }
 
-        //ir a verify account
+        //ir a home
+        loginViewModel.navigateToHome.observe(this) {
+            it.getContentIfNotHandled()?.let {
+                goToHome()
+            }
+        }
+
+        //ir a verification
         loginViewModel.navigateToVerifyAccount.observe(this) {
             it.getContentIfNotHandled()?.let {
-                goToVerify()
+                goToVerification()
             }
         }
 
@@ -92,13 +102,9 @@ class Login : AppCompatActivity() {
 
     private fun updateUI(viewState: LoginViewState) {
         with(binding) {
-            pbLoading.visibility = Integer.valueOf(viewState.isLoading.toString())
-            if (!viewState.isValidEmail) {
-                campoEmail.setTextColor(getColor(R.color.red))
-            }
-            if (!viewState.isValidPassword) {
-                campoContraseA.setTextColor(getColor(R.color.red))
-            }
+            pbLoading.visibility = if (viewState.isLoading) View.VISIBLE else View.GONE
+            campoEmail.setTextColor(if (viewState.isValidEmail) ContextCompat.getColor(this@Login, R.color.black) else ContextCompat.getColor(this@Login, R.color.red))
+            campoContraseA.setTextColor(if (viewState.isValidPassword) ContextCompat.getColor(this@Login, R.color.black) else ContextCompat.getColor(this@Login, R.color.red))
         }
     }
 
@@ -135,7 +141,11 @@ class Login : AppCompatActivity() {
         startActivity(Register.create(this))
     }
 
-    private fun goToVerify() {
-        startActivity(Verification.create(this))
+    private fun goToHome() {
+        startActivity(Principal.create(this))
+    }
+
+    private fun goToVerification() {
+        startActivity(VerificationEmail.create(this))
     }
 }

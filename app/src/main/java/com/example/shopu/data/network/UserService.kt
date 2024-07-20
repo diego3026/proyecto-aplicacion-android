@@ -14,8 +14,7 @@ class UserService @Inject constructor(private val firebase: FirebaseClient) {
 
         val user = hashMapOf(
             "email" to userRegister.email,
-            "nickname" to userRegister.nickName,
-            "realname" to userRegister.realName
+            "fullname" to userRegister.name,
         )
 
         firebase.db

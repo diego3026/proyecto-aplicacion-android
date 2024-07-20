@@ -1,6 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ShopU</string>
     <string name="your_web_client_id">145166103132-uv6r0ssjbvjhqvfupued4ee4s3b2vbed.apps.googleusercontent.com</string>
+    <string name="terminos_y_condiciones" tools:ignore="TypographyDashes">https://firebasestorage.googleapis.com/v0/b/shopu-af662.appspot.com/o/T%C3%A9rminos%20y%20Condiciones.pdf?alt=media&amp;token=876218a4-07e3-4236-9602-a87af9f598dc</string>
+    <string name="politicas_de_privacidad" tools:ignore="TypographyDashes">https://firebasestorage.googleapis.com/v0/b/shopu-af662.appspot.com/o/Pol%C3%ADtica%20de%20Privacidad.pdf?alt=media&amp;token=de55432c-179b-46f7-844d-6284b2e5f65c</string>
     <!-- Bienvenida-->
     <string name="title_bienvenida">¡Donde encuentras todo lo que necesitas!</string>
     <string name="subtitle_bienvenida">Bienvenido a ShopU, ¡Tu plataforma de compras favorita!</string>
@@ -22,14 +24,14 @@
     <!-- registrate-->
     <string name="title_register">Registrate</string>
     <string name="subtitle_register">Crea una cuenta para empezar</string>
-    <string name="nombre_text_register">Nombre</string>
+    <string name="nombre_text_register">Nombre completo</string>
     <string name="email_text_register">Correo electronico</string>
     <string name="email_placeholder_register">nombre@email.com</string>
     <string name="password_text_register">Contraseña</string>
     <string name="password_placeholder_register">Crea una contraseña</string>
     <string name="confirm_password_placeholder_register">Confirma tu contraseña</string>
     <string name="password_not_match">Las contraseñas no coinciden</string>
-    <string name="text_terminos_register">He leído y acepto los Términos y condiciones y la Política de privacidad.</string>
+    <string name="text_terminos_register">He leído y acepto los Términos y condiciones, y la Política de privacidad.</string>
     <string name="text_buttom_register">Registrarse</string>
     <string name="signin_error_dialog_title">Ha ocurrido un error</string>
     <string name="signin_error_dialog_body">No hemos podido crear tu cuenta, inténtalo de nuevo más tarde</string>
@@ -49,11 +51,19 @@
     <string name="placeholder_confirm_new_password">Confirmar contraseña</string>
     <string name="text_buttom_create_new_password">Restablecer la contraseña</string>
 
-    <!--contraseña cambiada -->
-    <string name="title_changed_password">¡Contraseña cambiada!</string>
-    <string name="subtitle_changed_password">Tu contraseña ha sido cambiada exitosamente.</string>
+    <!--confirmacion envio cambio contraseña -->
+    <string name="title_changed_password">¡Correo enviado!</string>
+    <string name="subtitle_changed_password">Vez a tu correo electronico para cambiar tu contraseña.</string>
     <string name="text_buttom_changed_password">Iniciar sesion</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- verificacion -->
+    <string name="verification_button_new_password">Vamos</string>
+    <string name="verification_text_register">Para acceder a la aplicacion verifica tu correo electronico (recuerda mirar en SPAM)</string>
+    <string name="verification_check_mail">Para cambiar tu contraseña verifica tu correo electrónico (recuerda mirar en SPAM).</string>
 
+    <!-- dialog -->
+    <string name="dialog_success_title">¡Registro completado exitosamente!</string>
+    <string name="dialog_success_body">Continuemos en la apliacion</string>
+    <string name="dialog_success_positive">¡Gracias!</string>
 </resources>

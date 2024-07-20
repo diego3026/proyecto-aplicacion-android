@@ -1,5 +1,6 @@
 package com.example.shopu.domain
 
+import android.util.Log
 import com.example.shopu.data.network.AuthenticationService
 import com.example.shopu.data.network.UserService
 import com.example.shopu.ui.register.model.UserRegister
@@ -11,11 +12,17 @@ class CreateAccountUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(userRegister: UserRegister): Boolean {
-        val accountCreated =
-            authenticationService.createAccount(userRegister.email, userRegister.password) != null
-        return if (accountCreated) {
-            userService.createUserTable(userRegister)
-        } else {
+        return try {
+            val accountCreated =
+                authenticationService.createAccount(userRegister.email, userRegister.password) != null
+            if (accountCreated) {
+                userService.createUserTable(userRegister)
+                true
+            } else {
+                false
+            }
+        } catch (e: Exception) {
+            Log.e("CreateAccountUseCase", "Error creating account: ${e.message}")
             false
         }
     }

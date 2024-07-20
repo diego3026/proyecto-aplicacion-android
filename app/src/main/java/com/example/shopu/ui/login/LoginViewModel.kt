@@ -20,7 +20,6 @@ class LoginViewModel @Inject constructor(val loginUseCase: LoginUseCase) : ViewM
     private companion object {
         const val MIN_PASSWORD_LENGTH = 6
     }
-
     private val _navigateToHome = MutableLiveData<Event<Boolean>>()
     val navigateToHome: LiveData<Event<Boolean>>
         get() = _navigateToHome
@@ -94,4 +93,5 @@ class LoginViewModel @Inject constructor(val loginUseCase: LoginUseCase) : ViewM
 
     private fun isValidPassword(password: String): Boolean =
         password.length >= MIN_PASSWORD_LENGTH || password.isEmpty()
+
 }

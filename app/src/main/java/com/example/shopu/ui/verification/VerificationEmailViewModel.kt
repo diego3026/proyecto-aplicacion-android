@@ -14,14 +14,14 @@ import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
-class VerificationViewModel @Inject constructor(
+class VerificationEmailViewModel @Inject constructor(
     val sendEmailVerificationUseCase: SendEmailVerificationUseCase,
     val verifyEmailUseCase: VerifyEmailUseCase
 ) : ViewModel() {
 
-    private val _navigateToVerifyAccount = MutableLiveData<Event<Boolean>>()
-    val navigateToVerifyAccount: LiveData<Event<Boolean>>
-        get() = _navigateToVerifyAccount
+    private val _navigateToHome = MutableLiveData<Event<Boolean>>()
+    val navigateToHome: LiveData<Event<Boolean>>
+        get() = _navigateToHome
 
     private val _showContinueButton = MutableLiveData<Event<Boolean>>()
     val showContinueButton: LiveData<Event<Boolean>>
@@ -30,7 +30,6 @@ class VerificationViewModel @Inject constructor(
     init {
         viewModelScope.launch { sendEmailVerificationUseCase() }
         viewModelScope.launch {
-
             verifyEmailUseCase()
                 .catch {
                     Timber.i("Verification error: ${it.message}")
@@ -43,7 +42,7 @@ class VerificationViewModel @Inject constructor(
         }
     }
 
-    fun onGoToDetailSelected() {
-        _navigateToVerifyAccount.value = Event(true)
+    fun onGoHome() {
+        _navigateToHome.value = Event(true)
     }
 }

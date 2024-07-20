@@ -29,9 +29,23 @@ class AuthenticationService @Inject constructor(private val firebase: FirebaseCl
         return firebase.auth.createUserWithEmailAndPassword(email, password).await()
     }
 
-    suspend fun sendVerificationEmail() = runCatching {
-        firebase.auth.currentUser?.sendEmailVerification()?.await() ?: false
-    }.isSuccess
+    suspend fun recoverPassword(email: String): Boolean {
+        return runCatching {
+            firebase.auth.sendPasswordResetEmail(email).await()
+            true
+        }.getOrElse {
+            false
+        }
+    }
+
+    suspend fun sendVerificationEmail(): Boolean {
+        return runCatching {
+            firebase.auth.currentUser?.sendEmailVerification()?.await()
+            true
+        }.getOrElse {
+            false
+        }
+    }
 
     private suspend fun verifyEmailIsVerified(): Boolean {
         firebase.auth.currentUser?.reload()?.await()
